@@ -2,7 +2,7 @@
 Theme Name: React Theme
 */
 /*******
-BRAY:background-color:rgba(238,238,238 ,1)
+
 
 */
 body{width:100%;}
@@ -11,20 +11,22 @@ div{background-position:center;background-repeat:no-repeat;background-size:cover
 #content_space, #reactSidebar{float:left;}
 #content_space{width:70%;margin-top:0.6em}
 #reactSidebar{width:30%}
-#content_space > div {overflow:auto;display:flex;flex-direction:row;flex-wrap:wrap;}
+#content_space > div {display:flex;flex-direction:row;flex-wrap:wrap;}
 /*****************************POSTS*****************************/
 .post{flex-grow:3;width:30.8%;margin-left:2.5% !important;margin-top:2.5em !important;}
 .post > div:nth-child(1) {width:100%;height:300px;}
 .post > div:nth-child(2){width:100%;height:200px;overflow:hidden;}
-.post > h4, .post > div:nth-child(3){padding:0px 10px 0px 10px;text-align:left;}
-.post > h4{font-size:15px;}
+.post > div > div {width: inherit;height: inherit;background: rgba(63,81,181 ,0.5);cursor:pointer;}
+.post h4 {font-size: 1.2em;text-align: center;color: white;text-transform: uppercase;position: absolute;margin-top: 50%;}
 
 /*****************************DISPLAY A POST*****************/
-#displayapost{width:70%;min-height:860px;background-color:white;position:absolute;top:10%;z-index:1;left:15%}
-#displayapost button{position:absolute;margin-top:250px;left:50%;}
+#displayapost{width: 30%;background-color: white;position: absolute;top: 30%;z-index: 1;left: 35%;}
+#displayapost button:nth-of-type(1) {background:rgba(197,202,233 ,1)}
+#displayapost button:nth-of-type(2) {background: rgba(248,187,208 ,1);}
 #displayapost > div {background-size:cover;width:100%;}
-#displayapost > div:nth-child(2){height:500px;}
-#displayapost > div:nth-child(3){padding: 10% 5% 0 5%;}
+#displayapost > div:hover{}
+#displayapost > div:nth-of-type(1){height:300px;}
+#displayapost > div:nth-of-type(2){padding: 10% 5% 0 5%;}
 
 /***************************************HEADER *******************/
 #header{width:100%;display:flex;}

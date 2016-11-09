@@ -13,7 +13,7 @@ var  Posts = React.createClass({
       .done(function(data){
             s.setState({posts:data,selected_post_id:data[0]["id"]}); //set posts
             var promises = [];
-        //  console.log(data)
+        console.log(data)
         data.forEach(function(post){
           if(post["featured_media"] < 1 ){var promise = (React_Theme_Resource.defaultPromise)}
           else{var promise = j.ajax(React_Theme_Resource.getMedia + "/" + post["featured_media"]);}
@@ -67,17 +67,20 @@ var Post = React.createClass({
           var style = {backgroundImage: 'url(' + post["featured_media"]["source_url"]+')'}
           return (
             <div className="post card" onClick={this.props.slide.bind(null,{status:true,id:post.id})}>
-                <div style={style}></div>
-                <h4>{post.title.rendered}</h4>
-                <div dangerouslySetInnerHTML={this.props.getRawMarkup((this.props.post["excerpt"]["rendered"]))}/>
+                <div style={style}>
+                  <div>
+                      <h4>{post.title.rendered}</h4>
+                  </div>
+                </div>
             </div>
           )
       }
 })
 //DISPLAY POST
 var DisplayAPost = React.createClass({
-    componentDidMount(){
-          j("#displayapost").hide()
+    componentDidMount(){j("#displayapost").hide()},
+    goToPost(){
+      j("#displayapost").effect("puff","slow");//window.location = this.props.selection.link;
     },
     render(){
           var post = this.props.selection;
@@ -85,9 +88,12 @@ var DisplayAPost = React.createClass({
         return (
 
            <div id="displayapost" class="card">
-              <button onClick={this.props.slide.bind(null,{status:false})} className="btn-floating btn-large waves-effect waves-light gold">Close</button>
-                <div style={style}/>
-                <div><div dangerouslySetInnerHTML={this.props.getRawMarkup(post["content"]["rendered"])} /></div>
+
+                <div style={style}>
+                    <button onClick={this.props.slide.bind(null,{status:false})} className="waves-effect waves-light btn">Close</button>
+                    <button onClick={this.goToPost.bind()} className="waves-effect waves-light btn">See more</button>
+                </div>
+                <div><div dangerouslySetInnerHTML={this.props.getRawMarkup(post["excerpt"]["rendered"])} /></div>
 
             </div>
 

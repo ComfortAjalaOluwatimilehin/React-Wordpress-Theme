@@ -7,10 +7,12 @@
         //add babel
         add_filter( 'script_loader_tag', 'BabelType', 10, 3 );
 
-      //stream_supports
-      add_theme_support( 'post-thumbnails' );
-
       //change excerpt
       add_filter( "excerpt_length", "excerptLength", 999 );
+
+      //THEME SUPPORT
+      add_action("init","comfort_theme_support");
+
+
 
  ?>
