@@ -21,7 +21,7 @@ var Header = React.createClass({
       },
       render(){
           var main_menu = ((this.state.menus).filter(function(menu){return menu.name == "Main"}))[0];
-            console.log(main_menu)
+            //console.log(main_menu)
           return (
 
               <div id="header" className="card">

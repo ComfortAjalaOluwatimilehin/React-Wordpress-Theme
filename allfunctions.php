@@ -16,6 +16,7 @@
                   wp_enqueue_script("babel","https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js");
                   wp_enqueue_script("main",get_template_directory_uri() . "/scripts/main.js", array("markdown","react","react-dom","babel"));
                   wp_enqueue_script("header",get_template_directory_uri() . "/scripts/header.js", array("react","react-dom","babel"));
+                  wp_enqueue_script("sidebar",get_template_directory_uri() . "/scripts/sidebar.js", array("react","react-dom","babel"));
                   wp_enqueue_script("jquery-file",get_template_directory_uri() . "/scripts/jq.js", array("jquery","main"));
                   wp_enqueue_script("resources",get_template_directory_uri() . "/resources.js", array());
           }
@@ -28,7 +29,7 @@
 
 
           function checkhandle($handle){
-            if($handle == "main" ||  $handle == "header" ){return true;}
+            if($handle == "main" ||  $handle == "header" ||$handle == "sidebar" ){return true;}
           else{return false;}}
 
           //reduce the excerpt length

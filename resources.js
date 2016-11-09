@@ -5,6 +5,13 @@ var React_Theme_Resource = {
     getPost: url + "/wp-json/wp/v2/posts",
     getMedia: url + "/wp-json/wp/v2/media",
     getMenu: url + "/wp-json/wp-api-menus/v2/menus",
-    defaultImage:def
+    getCategories:url + "/wp-json/wp/v2/categories",
+    defaultImage:def,
+    defaultPromise:new Promise(
+      function(resolve,reject){
+          resolve(def)
+      }
+    )
+
 
 }

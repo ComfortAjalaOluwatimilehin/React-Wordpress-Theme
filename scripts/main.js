@@ -13,15 +13,19 @@ var  Posts = React.createClass({
       .done(function(data){
             s.setState({posts:data,selected_post_id:data[0]["id"]}); //set posts
             var promises = [];
-          console.log(data)
+        //  console.log(data)
         data.forEach(function(post){
-              var promise = j.ajax(React_Theme_Resource.getMedia + "/" + post["featured_media"]);
+          if(post["featured_media"] < 1 ){var promise = (React_Theme_Resource.defaultPromise)}
+          else{var promise = j.ajax(React_Theme_Resource.getMedia + "/" + post["featured_media"]);}
               promises.push(promise);
         })
          promises.forEach(function(promise,i){
               promise.then(function(values){
-                s.state.posts[i]["featured_media"] = values; s.setState({posts:s.state.posts});
+                if(typeof values == "string"){s.state.posts[i]["featured_media"]  = {"source_url":values}}
+                else{s.state.posts[i]["featured_media"] = values;}
+                 s.setState({posts:s.state.posts});
               })
+
         })
 
       })
