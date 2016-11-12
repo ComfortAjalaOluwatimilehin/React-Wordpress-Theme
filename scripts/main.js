@@ -80,7 +80,10 @@ var Post = React.createClass({
 var DisplayAPost = React.createClass({
     componentDidMount(){j("#displayapost").hide()},
     goToPost(){
-      j("#displayapost").effect("puff","slow");//window.location = this.props.selection.link;
+      j("#displayapost").effect("puff","slow",()=>{
+          window.location = this.props.selection.link;
+      })
+
     },
     render(){
           var post = this.props.selection;

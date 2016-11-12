@@ -6,11 +6,11 @@ Theme Name: React Theme
 
 */
 body{width:100%;}
-div{background-position:center;background-repeat:no-repeat;background-size:cover;}
+div{background-position:center !important;background-repeat:no-repeat !important;background-size:cover !important ;}
 .card{margin:0px !important;}
-#content_space, #reactSidebar{float:left;}
+#content_space, #sidebar{float:left;}
 #content_space{width:70%;margin-top:0.6em}
-#reactSidebar{width:30%}
+#sidebar{width:30%}
 #content_space > div {display:flex;flex-direction:row;flex-wrap:wrap;}
 /*****************************POSTS*****************************/
 .post{flex-grow:3;width:30.8%;margin-left:2.5% !important;margin-top:2.5em !important;}
@@ -35,3 +35,11 @@ div{background-position:center;background-repeat:no-repeat;background-size:cover
 #header > div > li {flex: 1;list-style:none;height: 50px;padding-top: 25px;text-align: center;}
 #header  a {color:black; text-decoration:none }
 #header form input{border:none;width: calc(70% - 4rem);background-color:rgba(238,238,238 ,1);border-radius: 2em;}
+
+
+
+/*****************WIDGETS*******************/
+#allTags {width: 80%;margin-left: 10%;padding-top: 20%;}
+#allTags span {border: 2px solid rgba(224,224,224 ,1);padding: 5px;display: inline-block;margin: 2px;border-radius: 5%;}
+#allTags span:hover{background: rgba(224,224,224 ,1);border-color:pink;}
+/************************************SIDEBAR ********************/
