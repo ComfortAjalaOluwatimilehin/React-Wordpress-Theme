@@ -24,7 +24,7 @@ var Header = React.createClass({
             //console.log(main_menu)
           return (
 
-              <div id="header" className="card">
+              <div id="header" className="card row">
                   {main_menu ? <Main_Navigation  menu ={main_menu}/> :null}
                   <SearchBar />
               </div>
@@ -37,13 +37,16 @@ var Header = React.createClass({
 var Main_Navigation = React.createClass({
     render(){
             return (
-                      <div>
+                      <div className="col s7">
+                        <div className="row mainNav">
                                     {this.props.menu.items.map(item => {
                                     return (
-                                          <li><a href={item.url}>{item.title}</a></li>
+                                          <li className="col s2"><a href={item.url}>{item.title}</a></li>
                                     )
                                   })
+
                                 }
+                        </div>
                       </div>
                 )
     }
@@ -52,7 +55,7 @@ var Main_Navigation = React.createClass({
 var SearchBar = React.createClass({
   render(){
     return (
-        <form className="searchspace">
+        <form className="searchspace col s3">
            <div className="input-field">
              <input id="search" type="search" required/>
              <label for="search"><i className="material-icons">search</i></label>

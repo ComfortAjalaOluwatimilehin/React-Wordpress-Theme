@@ -35,7 +35,7 @@
               function excerptLength($length){return 50;}
                 //add supports, menus them
                 function comfort_theme_support(){
-                register_nav_menus(array('primary-menu' => __( 'Primary Menu' ),'secondary-menu' => __( 'Secondary Menu' )));
+                register_nav_menus(array('primary-menu' => __( 'Primary Menu' ),'secondary-menu' => __( 'Secondary Menu' ),'sub-cat-menu' => __( 'SubCategory Menu' )));
                 //add_theme_support("post-formats",array("aside","video","gallery"));
                 //add_theme_support('post-thumbnails');
                 }

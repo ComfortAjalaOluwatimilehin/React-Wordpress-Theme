@@ -2,3 +2,13 @@
 #standard > div {width: 80%;margin-left: 10%;}
 .standard_featuredimage{height:400px;margin-top:2%;}
 .tags > span > a {display: inline-block;background-color: rgba(129,212,250 ,1);border-radius: 20px;margin-left: 2%;min-width: 100px;text-align: center;color:gray;}
+
+
+/****RESPONSIVE ***/
+@media screen and (max-width: 780px) {
+#standard{width:100%;}
+}
+
+@media screen and (max-width: 380px) {
+
+}

@@ -1,3 +1,13 @@
 .each_category_post.row {height: 200px;overflow: hidden;margin-left:5%;width:90%}
 .category-thumbnail.col.s3 {height: inherit;}
 #category-space {width: 70%;float: left;margin-top:5%}
+/****RESPONSIVE ***/
+@media screen and (max-width: 780px) {
+    #category-space{width:100% !important}
+    .category-thumbnail.col.s3{display:none;}
+    .category-text.col.s6{width:100% !important}
+}
+
+@media screen and (max-width: 380px) {
+
+}

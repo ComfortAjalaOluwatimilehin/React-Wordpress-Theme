@@ -5,3 +5,11 @@
 #tag-list li:nth-child(odd){border-color: rgba(248,187,208 ,1)}
 #tag-list li a {color:gray}
 #tag-list li:hover{background-color:rgba(224,224,224 ,1);color:white;}
+/****RESPONSIVE ***/
+@media screen and (max-width: 780px) {
+#tag-list {width: 100%;float: left;margin-top:5%;margin-left:0% !important;}
+}
+
+@media screen and (max-width: 380px) {
+
+}
