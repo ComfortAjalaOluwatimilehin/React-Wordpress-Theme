@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <head>
-        <title>React Theme </title>
+        <title><?php echo wp_title("");?></title>
         <?php do_action("wp_head"); ?>
     </head>
     <body>
